@@ -1,4 +1,4 @@
-#!bin/bash
+#!/bin/bash
 clear
 
 LANG=C
@@ -107,7 +107,7 @@ BUILD_NOW()
 	fi;
 
 	# build zImage
-	time make ARCH=arm CROSS_COMPILE=android-toolchain/bin/arm-eabi- zImage-dtb -j ${NR_CPUS}
+	time make ARCH=arm CROSS_COMPILE=/opt/uber/bin/arm-eabi- zImage-dtb -j ${NR_CPUS}
 
 	stat "$KERNELDIR"/arch/arm/boot/zImage || exit 1;
 

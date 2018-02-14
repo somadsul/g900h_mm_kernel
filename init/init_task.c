@@ -11,8 +11,8 @@
 #include <asm/pgtable.h>
 #include <asm/uaccess.h>
 
-static struct signal_struct init_signals = INIT_SIGNALS(init_signals);
-static struct sighand_struct init_sighand = INIT_SIGHAND(init_sighand);
+const struct signal_struct init_signals = INIT_SIGNALS(init_signals);
+const struct sighand_struct init_sighand = INIT_SIGHAND(init_sighand);
 
 /* Initial task structure */
 struct task_struct init_task = INIT_TASK(init_task);
